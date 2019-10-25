@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<canvas id="canvas" width="600" height="600"></canvas>
+		<canvas id="my-canvas" width="110" height="60"></canvas>
+		<canvas id="botaocheck" width="600" height="600"></canvas>
+		<script type="text/javascript">
+			
+
+			var canvas = document.getElementById("my-canvas");
+			var context = canvas.getContext("2d");
+							
+			var canvas = document.getElementById('canvas');
+			var ctx = canvas.getContext('2d');
+			//tela
+			ctx.strokeStyle = 'black';
+			ctx.strokeRect(50, 50, 500, 500);
+			ctx.fillRect(this.x, this.y, this.w, this.h);
+			context.stroke();
+			//checkbox
+			ctx.strokeStyle = 'black';
+			ctx.strokeRect(100, 200, 50, 50);
+			ctx.font = "20px Arial";
+			ctx.fillText("CheckBox", (canvas.width / 2) - 145, (canvas.height / 2) -65);
+			ctx.fillRect(this.x, this.y, this.w, this.h);
+			context.stroke();
+			//textfield
+			ctx.strokeStyle = 'black';
+			ctx.strokeRect(100, 140, 150, 50);
+			ctx.font = "20px Arial";
+			ctx.fillText("TextField", (canvas.width / 2) - 190, (canvas.height / 2) -130);
+			ctx.fillRect(this.x, this.y, this.w, this.h);
+			context.stroke();
+			//botao
+			ctx.strokeStyle = 'black';
+			ctx.strokeRect (220, 350, 150, 50);
+			ctx.font = "bold 20px Arial";
+			ctx.fillText("Submit", (canvas.width / 2) - 38, (canvas.height / 2) + 80);
+			ctx.fillRect(this.x, this.y, this.w, this.h);
+			ctx.stroke();
+		
+			function onTarget(pos, bt) {
+				  return pos.x > bt.x && pos.x < (bt.x + bt.w) && pos.y > bt.y && pos.y < (bt.y + bt.h);
+				}
+
+		</script>
+	</body>
+</html>
